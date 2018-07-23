@@ -1,4 +1,4 @@
-;;; Time-stamp: <2017-10-03 23:26:50 Charles-Edouard>
+;;; Time-stamp: <2018-07-22 21:53:55 Charles-Edouard>
 ;;; Mon .emacs
 ;;; Charles-Édouard Giguère
 
@@ -8,48 +8,51 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-
 ;;; Dépôt melpa pour télécharger les packages emacs. 
 (add-to-list 'package-archives
 	     '("melpa-stable" . "http://stable.melpa.org/packages/")
 	     t)
 
-;(add-to-list 'package-archives
-;	     '("melpa" . "http://melpa.milkbox.net/packages/")
-;	     t)
+(add-to-list 'package-archives
+	     '("melpa" . "http://melpa.milkbox.net/packages/")
+	     t)
+
+(load "C:/Users/Charles-Edouard/.emacs.d/CEG-emacs-theme/PURPLE_RAIN-theme.el")
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (ceg)))
  '(custom-safe-themes
    (quote
-    ("6b4f7bde1ce64ea4604819fe56ff12cda2a8c803703b677fdfdb603e8b1f8bcb" "8e7044bfad5a2e70dfc4671337a4f772ee1b41c5677b8318f17f046faa42b16b" "fc1137ae841a32f8be689e0cfa07c872df252d48426a47f70dba65f5b0f88ac4" "63aff36a40f41b28b0265ac506faa098fd552fac0a1813b745ba7c27efa5a943" "ed92c27d2d086496b232617213a4e4a28110bdc0730a9457edf74f81b782c5cf" "b8c5adfc0230bd8e8d73450c2cd4044ad7ba1d24458e37b6dec65607fc392980" "45482e7ddf47ab1f30fe05f75e5f2d2118635f5797687e88571842ff6f18b4d5" "b48599e24e6db1ea612061252e71abc2c05c05ac4b6ad532ad99ee085c7961a7" "cb39485fd94dabefc5f2b729b963cbd0bac9461000c57eae454131ed4954a8ac" "0973b33d2f15e6eaf88400eee3dc8357ad8ae83d2ca43c125339b25850773a70" "880f541eabc8c272d88e6a1d8917fe743552f17cedd8f138fe85987ee036ad08" "ec0c9d1715065a594af90e19e596e737c7b2cdaa18eb1b71baf7ef696adbefb0" "5c5de678730ceb4e05794431dd65f30ffe9f1ed6c016fa766cdf909ba03e4df4" "4bcdfc98cf64ce6145684dc8288fd87489cfa839e07f95f6c791d407624d04f8" "5eb4b22e97ddb2db9ecce7d983fa45eb8367447f151c7e1b033af27820f43760" "a455366c5cdacebd8adaa99d50e37430b0170326e7640a688e9d9ad406e2edfd" "78151250310a7b83251146e9677c8c6ed479cfb09958e6242f93770237615f2a" default)))
+    ("ff8c6c2eb94e776c9eed9299a49e07e70e1b6a6f926dec429b99cf5d1ddca62a" "0e8c264f24f11501d3f0cabcd05e5f9811213f07149e4904ed751ffdcdc44739" "880f541eabc8c272d88e6a1d8917fe743552f17cedd8f138fe85987ee036ad08" "5f4dfda04fbf7fd55228266c8aab73953d3087cea7fd06dd7f8ff1e4a497c739" "2ae4b0c50dd49a5f74edeae3e49965bf8853954b63c5712a7967ea0a008ecd5b" "3fe4861111710e42230627f38ebb8f966391eadefb8b809f4bfb8340a4e85529" "9bd5ee2b24759fbc97f86c2783d1bf8f883eb1c0dd2cf7bda2b539cd28abf6a9" "0c5204945ca5cdf119390fe7f0b375e8d921e92076b416f6615bbe1bd5d80c88" "39a854967792547c704cbff8ad4f97429f77dfcf7b3b4d2a62679ecd34b608da" "2d5c40e709543f156d3dee750cd9ac580a20a371f1b1e1e3ecbef2b895cf0cd2" "392f19e7788de27faf128a6f56325123c47205f477da227baf6a6a918f73b5dc" "7bd626fcc9fbfb44186cf3f08b8055d5a15e748d5338e47f9391d459586e20db" "be5b03913a1aaa3709d731e1fcfd4f162db6ca512df9196c8d4693538fa50b86" default)))
+ '(ess-default-style (quote RStudio))
+ '(ess-eval-visibly (quote nowait))
  '(ess-history-file nil)
- '(ess-swv-pdflatex-commands (quote ("pdflatex")))
+ '(ess-r-args-electric-paren t)
  '(ess-swv-processor (quote knitr))
+ '(inferior-R-args "--no-save --no-restore --no-init-file --no-environ")
  '(inhibit-startup-screen t)
  '(make-backup-files nil)
  '(package-selected-packages
    (quote
-    (elpy markdown-mode auctex polymode dired-single ess auto-complete color-theme-modern)))
- '(python-shell-completion-native-enable nil)
- '(safe-local-variable-values
-   (quote
-    ((outline-minor-mode)
-     (whitespace-style face tabs spaces trailing lines space-before-tab::space newline indentation::space empty space-after-tab::space space-mark tab-mark newline-mark)))))
+    (color-theme-modern magit elpy polymode markdown-mode dired-single ess company)))
+ '(python-shell-completion-native-disabled-interpreters (quote ("pypy" "ipython" "python")))
+ '(python-shell-interpreter "ipython")
+ '(safe-local-variable-values (quote ((Encoding . utf-8)))))
 
- 
- 
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "outline" :slant normal :weight normal :height 113 :width normal)))))
- 
+ '(default ((t (:family "Consolas" :foundry "outline" :slant normal :weight normal :height 120 :width normal)))))
+
+
+(add-hook 'after-init-hook 'global-company-mode)
 
 ;;; Mettre mon home comme répertoire par défaut.
 (setq default-directory "C:/Users/Charles-Edouard")
@@ -67,13 +70,16 @@
 ;;; Pour que la date s'affiche automatiquement.
 (add-hook 'before-save-hook 'time-stamp)
 
-
 (load "ess-site")
-;;; load auto-complete.
-(load "auto-complete")
-;;; pour auto-complete dans ess.
-(global-auto-complete-mode)
-(setq ess-use-auto-complete t)
+(setq ess-use-company 'script-only)
+
+
+(setq company-selection-wrap-around t
+      company-tooltip-align-annotations t
+      company-idle-delay 0.36
+      company-minimum-prefix-length 2
+      company-tooltip-limit 10)
+
 
 ;;; Entête Standard pour R. 
 (fset 'entete
@@ -148,8 +154,6 @@
 
 (global-set-key (kbd "<f2>") 'xah-open-in-external-app) 
 
-
-
 (setq ispell-program-name "aspell")
 (setq ispell-personal-dictionary "~/.ispell")
 (require 'ispell)
@@ -165,6 +169,14 @@
 	 arg)))
 (global-set-key (kbd "<f6>") 'insert-r-block)
 
+(fset 'rmarkdown-template
+      (lambda (&optional arg) "Keyboard macro."
+	(interactive "p")
+	(insert-file "c:/Charles/Statistiques/Rmarkdown/template.Rmd")
+	)
+      )
+
+(global-set-key (kbd "C-<f6>") 'rmarkdown-template)
 
 
 ;;; Liste de raccourci de type f[0-9][0-9]
@@ -176,6 +188,7 @@
 ;;;   f4  arrêter un macro.
 ;;;   f5  Vérifier un mot.
 ;;; c-f5  fly-spell.
+;;; c-f6  créer un fichier rmarkdown
 ;;;   f6  inserer un bout de code r dans
 ;;;       rmarkdown. 
 ;;;   f7  replace-regexp
@@ -185,7 +198,6 @@
 ;;;   f11 full-screen
 ;;;   f12 kill-buffer
 ;;; ======================================
-
 
 ;;; Configuration pour les répertoires.
 (defun my-dired-init ()
@@ -204,20 +216,9 @@
   ;; si dired n'est pas loadé on ajoute un hook.
   (add-hook 'dired-load-hook 'my-dired-init))
 
-;;; Configuration pour python à ajouter plus tard. 
-;;; (elpy-enable)
-
 (put 'scroll-left 'disabled nil)
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
-
-;;; Auto-complete dans tex.
-(add-hook 'tex-mode-hook
-	  (lambda ()
-	    (require 'auto-complete-config)
-	    (ac-config-default)
-	    (require 'auto-complete-auctex))
-	  )
 
 ;;; Markdown mode
 (autoload 'markdown-mode "markdown-mode"
@@ -246,3 +247,27 @@ Restore match data previously stored in PROPERTY."
       (goto-char (min (1+ (max (match-end 0) (point)))
                       (point-max)))
       saved)))
+
+;;; Mplus mode
+;;; changer le path (au besoin).
+(load "C:/charles/Statistiques/Mplus_mode/mplus-mode.el")
+(setq auto-mode-alist (cons '("\\.inp" . mplus-mode) auto-mode-alist))
+(add-hook 'mplus-mode-hook
+	  (lambda ()
+	    (load "C:/Charles/Statistiques/Mplus_mode/company-mplus-mode.el")
+	    (setq-local company-dabbrev-downcase nil)
+	    )
+	  )
+
+(setenv "GIT_ASKPASS" "git-gui--askpass")
+
+(with-eval-after-load 'company
+  (define-key company-active-map (kbd "M-h") 'company-show-doc-buffer))
+
+(defun then_R_operator ()
+  "%>% operator or 'then' pipe operator"
+  (interactive)
+  (insert " %>%") ; note the space before the first %
+  (reindent-then-newline-and-indent))
+(global-set-key (kbd "C-;") 'then_R_operator)
+
