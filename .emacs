@@ -1,4 +1,4 @@
-;;; Time-stamp: <2018-07-22 21:53:55 Charles-Edouard>
+;;; Time-stamp: <2019-04-25 16:53:14 gigc2>
 ;;; Mon .emacs
 ;;; Charles-Édouard Giguère
 
@@ -50,6 +50,16 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Consolas" :foundry "outline" :slant normal :weight normal :height 120 :width normal)))))
+
+;; Instructions pour utiliser l'encodage utf-8 par défaut.
+(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+
+;; Treat clipboard input as UTF-8 string first; compound text next, etc.
+(setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING))
+
 
 
 (add-hook 'after-init-hook 'global-company-mode)
