@@ -1,5 +1,7 @@
 ;; Charles-Édouard Giguère.
 
+(setq default-process-coding-system '(utf-8-dos . utf-8-dos))
+
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want 
 ;; it, just comment it out by adding a semicolon to the start of 
@@ -11,9 +13,9 @@
 (add-to-list 'package-archives
 	     '("melpa-stable" . "http://stable.melpa.org/packages/")
 	     t)
-(add-to-list 'package-archives
-	     '("melpa" . "http://melpa.org/packages/")
-	     t)
+;;(add-to-list 'package-archives
+;;	     '("melpa" . "http://melpa.org/packages/")
+;;	     t)
 
 ;;
 ;;(load "c:/Users/gigc2/AppData/Roaming/.emacs.d/elpa/base16-theme-20191031.1607/base16-rebecca-theme.el")
@@ -33,7 +35,7 @@
    ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
  '(custom-enabled-themes '(FUSION))
  '(custom-safe-themes
-   '("3d9df5511048d0815b1ccc2204cc739117c1a458be92fb26c03451149a1b1c11" "36a168d0f7f425bc3678acbed146fbd08a9736bc473284a01acc8c278da73ee7" "a4bebfbc2ee9c9b06ede499c783a711397e53be22195930bec3b69e335333e6c" default))
+   '("161993d0fe35db6321a69a5427d0900380f2b855013b698c6cf70d20c7bb43fa" "3d9df5511048d0815b1ccc2204cc739117c1a458be92fb26c03451149a1b1c11" "36a168d0f7f425bc3678acbed146fbd08a9736bc473284a01acc8c278da73ee7" "a4bebfbc2ee9c9b06ede499c783a711397e53be22195930bec3b69e335333e6c" default))
  '(ess-R-font-lock-keywords
    '((ess-R-fl-keyword:modifiers . t)
      (ess-R-fl-keyword:fun-defs . t)
@@ -49,10 +51,13 @@
  '(ess-default-style 'DEFAULT)
  '(ess-eval-visibly 'nowait)
  '(ess-history-file nil)
- '(ess-style 'RStudio)
+ '(ess-rterm-version-paths '("c:/R/R-4.1.3/bin/x64/Rterm.exe"))
+ '(ess-style 'RRR)
  '(ess-swv-pdflatex-commands '("pdflatex"))
  '(ess-swv-processor 'knitr)
  '(ess-use-flymake 'process)
+ '(exec-path
+   '("c:/Users/gigc2/AppData/Roaming/ActiveState/bin" "C:/Program Files (x86)/Common Files/Oracle/Java/javapath" "C:/Program Files/Microsoft MPI/Bin/" "C:/WINDOWS/system32" "C:/WINDOWS" "C:/WINDOWS/System32/Wbem" "C:/WINDOWS/System32/WindowsPowerShell/v1.0/" "C:/Program Files (x86)/Microsoft SQL Server/150/DTS/Binn/" "C:/Program Files/dotnet/" "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/" "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/" "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/130/Tools/Binn/" "C:/Program Files (x86)/Microsoft SQL Server/140/Tools/Binn/" "C:/Program Files/Microsoft SQL Server/140/Tools/Binn/" "C:/Program Files/Microsoft SQL Server/140/DTS/Binn/" "C:/Program Files (x86)/QuickTime/QTSystem/" "C:/Program Files/Wolfram Research/WolframScript/" "C:/Program Files/MATLAB/R2020b/bin" "C:/WINDOWS/System32/OpenSSH/" "C:/Program Files/nodejs/" "C:/WINDOWS/system32" "C:/WINDOWS" "C:/WINDOWS/System32/Wbem" "C:/WINDOWS/System32/WindowsPowerShell/v1.0/" "C:/Program Files/Git/cmd" "C:/Program Files/Mplus/" "C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL" "C:/Program Files/Intel/Intel(R) Management Engine Components/DAL" "C:/Users/gigc2/AppData/Local/Microsoft/WindowsApps" "C:/Program Files/Mplus" "C:/Users/gigc2/AppData/Local/Pandoc/" "C:/Users/gigc2/AppData/Local/Programs/Git/cmd" "C:/rtools42/usr/bin" "C:/R/R-4.2.0/bin/x64" "C:/Users/gigc2/AppData/Local/Programs/Microsoft VS Code/bin" "C:/Users/gigc2/.dotnet/tools" "C:/Python39/" "C:/Python39/Scripts" "C:/Julia/bin" "C:/Users/gigc2/AppData/Local/Microsoft/WindowsApps" "C:/Users/gigc2/AppData/Roaming/npm" "C:/rtools42/mingw64/bin" "C:/Users/gigc2/.dotnet/tools" "C:/Program Files/Graphviz/bin" "C:/Users/gigc2/AppData/Roaming/TinyTeX/bin/win32" "." "c:/Users/gigc2/Documents/GnuEmacs27.2/emacs-27.2-x86_64/libexec/emacs/27.2/x86_64-w64-mingw32" "c:/R/R-4.1.3/bin/x64/"))
  '(inferior-R-args "--no-save --no-restore --no-init-file --no-environ")
  '(inhibit-startup-screen t)
  '(ispell-dictionary nil)
@@ -61,7 +66,7 @@
  '(make-backup-files nil)
  '(markdown-coding-system 'utf-8)
  '(package-selected-packages
-   '(yasnippet-snippets async dash find-file-in-project git-commit ivy julia-mode poly-markdown poly-noweb pythonic pyvenv transient with-editor yasnippet json-navigator json-mode base16-theme stan-mode company flycheck poly-R ess dired-single markdown-mode polymode elpy magit auctex))
+   '(hydandata-light-theme julia-repl ess-r-insert-obj ess yasnippet-snippets async dash find-file-in-project git-commit ivy julia-mode poly-markdown poly-noweb pythonic pyvenv transient with-editor yasnippet json-navigator json-mode base16-theme stan-mode company flycheck poly-R dired-single markdown-mode polymode elpy magit auctex))
  '(python-shell-completion-native-disabled-interpreters '("pypy" "ipython"))
  '(python-shell-interpreter "ipython")
  '(safe-local-variable-values '((Encoding . utf-8)))
@@ -130,13 +135,13 @@
 	(interactive "p")
 	(insert
 	 (concat
-	  "/* -*- Coding: utf-8 -*- */\n"
 	  "#' --- \n"
 	  "#' author: Charles-Édouard Giguère\n"
 	  "#' title: Rapport généré des commentaires et de la syntaxe.\n"
-	  "#' date: 2021-04-17\n"
+	  "#' date: " (format-time-string "%Y-%m-%d")  "\n"
 	  "#' output:\n"
 	  "#'   pdf_document\n"
+	  "#' fontsize: 12pt\n"
 	  "#' ---\n"
 	  "\n"
 	  "\n"
@@ -147,7 +152,7 @@
 	  "theme_set(theme_bw() + theme(legend.position = \"bottom\"))\n"
 	  "require(CUFF, quietly = TRUE, warn.conflicts = FALSE)\n"
 	  "require(knitr, quietly = TRUE, warn.conflicts = FALSE)\n"
-	  "opts_chunk$set(echo = FALSE, prompt = \">\",\n"
+	  "opts_chunk$set(echo = FALSE, prompt = TRUE,\n"
           "               comment = \"\", cache = TRUE)\n"))))
 
 (global-set-key (kbd "C-<f8>") 'entete_roxygen)
@@ -172,7 +177,7 @@
 
 (setq company-selection-wrap-around t
       company-tooltip-align-annotations t
-      company-idle-delay 0.05
+      company-idle-delay 0.03
       company-minimum-prefix-length 2
       company-tooltip-limit 10)
 
@@ -504,6 +509,16 @@ Restore match data previously stored in PROPERTY."
   (reindent-then-newline-and-indent))
 (global-set-key (kbd "C-;") 'then_R_operator)
 
+(defun break_quote ()
+  "Break long line with %+%"
+  (interactive)
+  (insert " \" %+%") ; note the space before the first %
+  (reindent-then-newline-and-indent)
+  (insert "\""))
+
+(global-set-key (kbd "C-,") 'break_quote)
+
+
 (add-hook 'Latex-mode-hook 'turn-on-auto-fill)
 
 (defun rap-rmd ()
@@ -611,9 +626,18 @@ Restore match data previously stored in PROPERTY."
 )
 (global-set-key (kbd "C-<f9>") 'rmd-run)
 
+(require 'ess-r-insert-obj)
+(global-set-key (kbd "C-<tab>") 'ess-r-insert-obj-col-name)
+(global-set-key (kbd "C-c C-<tab>") 'ess-r-insert-obj-dt-name)
+
 
 (setq user-full-name "Charles-Édouard Giguère")
 (setq user-mail-address "ce.giguere@gmail.com")
-
 (setq smtpmail-default-smtp-server "smtp.office365.com")
 
+;(setq explicit-shell-file-name "C:\Program Files\Git\git-bash.exe")
+
+(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-language-environment 'utf-8)
+(set-selection-coding-system 'utf-8)
